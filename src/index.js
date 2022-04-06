@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import App from "./App";
+// import AppFunction from "";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// function App() {
+//   return <p>Hello..</p>;
+// }
+
+// // Jsx
+// const name = "Guvii";
+// const students = [13, 25, 17, 68];
+// const obj = { name: "Priya" };
+
+// const ele = <p>Hello {name ? name : obj.name} !</p>;
+
+ReactDOM.render(<App />, document.getElementById("root"));

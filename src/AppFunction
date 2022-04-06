@@ -1,0 +1,5 @@
+function AppFunc() {
+  return <p>Hello-App class !</p>;
+}
+
+export default App;
