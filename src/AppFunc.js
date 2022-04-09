@@ -1,5 +1,5 @@
-function AppFunc(props) {
-  return <p>Hello-{props.name}-Function!</p>;
-}
+// function AppFunc(props) {
+//   return <p>Hello-{props.name}-Function!</p>;
+// }
 
-export default AppFunc;
+// export default AppFunc;

@@ -1,26 +1,30 @@
 import React from "react";
-import AppFunc from "./AppFunc";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       count: 0,
-      firstName: "Anu",
     };
   }
-  handleClick = () => {
-    this.setState({ count: 12, firstName: "Priya" });
-    console.log(this.state.count);
+  increment = () => this.setState({ count: this.state.count + 1 });
+  decrement = () => this.setState({ count: this.state.count - 1 });
+  reset = () => this.setState({ count: 0 });
+
+  handleCount = (type) => {
+    if (type === "INCREMENT") this.setState({ count: this.state.count + 1 });
+    else if (type === "DECREMENT")
+      this.setState({ count: this.state.count - 1 });
+    else this.setState({ count: 0 });
   };
+
   render() {
     return (
       <>
-        <p>Hello {this.props.name} -class !</p>
         <p>Count : {this.state.count}</p>
-        <p>FirstName: {this.state.firstName}</p>
-        <button onClick={this.handleClick}>Click Me</button>
-        <AppFunc name="test 2" />
+        <button onClick={() => this.handleCount("INCREMENT")}>Increment</button>
+        <button onClick={() => this.handleCount("DECREMENT")}>Decrement</button>
+        <button onClick={this.reset}>Reset</button>
       </>
     );
   }
